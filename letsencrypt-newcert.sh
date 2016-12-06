@@ -2,7 +2,7 @@
 
 CERTBOT="/usr/local/sbin/certbot-auto"
 
-if [ -x "$CERTBOT" ] ; then
+if [ ! -x "$CERTBOT" ] ; then
   wget https://dl.eff.org/certbot-auto -O $CERTBOT
   chmod 755 $CERTBOT
   $CERTBOT --os-packages-only
